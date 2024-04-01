@@ -8,4 +8,9 @@ public class BulletController : MonoBehaviour
         Destroy(gameObject);
         
     }
+    void Update(){
+        if(Time.timeScale != 0f){
+            transform.localScale=Vector3.Lerp(transform.localScale,Vector3.one,0.1f);
+        }
+    }
 }
